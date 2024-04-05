@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Vote Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Secure Vote Website</h1>
+        <div id="loginSection">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit" id="loginBtn">Login</button>
+            </form>
+            <div id="loginMessage"></div>
+        </div>
+        <div id="voteSection" style="display: none;">
+            <form id="voteForm">
+                <div class="options">
+                    <input type="radio" id="option1" name="vote" value="Option 1">
+                    <label for="option1">Option 1</label>
+                    <span id="voteCount1" class="vote-count">0</span>
+                </div>
+                <div class="options">
+                    <input type="radio" id="option2" name="vote" value="Option 2">
+                    <label for="option2">Option 2</label>
+                    <span id="voteCount2" class="vote-count">0</span>
+                </div>
+                <div class="options">
+                    <input type="radio" id="option3" name="vote" value="Option 3">
+                    <label for="option3">Option 3</label>
+                    <span id="voteCount3" class="vote-count">0</span>
+                </div>
+                <button type="submit" id="submitVote">Submit Vote</button>
+                <button type="button" id="resetVotes">Reset Votes</button>
+            </form>
+            <div id="voteMessage"></div>
+        </div>
+        <div id="voteResults" style="display: none;">
+            <h2>Vote Results</h2>
+            <div class="result">Option 1: <span id="resultCount1">0</span> (<span id="resultPercentage1">0</span>%)</div>
+            <div class="result">Option 2: <span id="resultCount2">0</span> (<span id="resultPercentage2">0</span>%)</div>
+            <div class="result">Option 3: <span id="resultCount3">0</span> (<span id="resultPercentage3">0</span>%)</div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
